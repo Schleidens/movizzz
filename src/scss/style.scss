@@ -1,6 +1,7 @@
 $bg-color: #1D2D44;
 $txt-color: #F0EBD8;
 $btn-color: #0D1321;
+$body_color: #3E5C76;
 
 
 
@@ -10,6 +11,11 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: $body-color;
+}
+
+@mixin border-radius {
+    border-radius: 5px;
 }
 
 
@@ -44,7 +50,7 @@ body{
         color: $txt-color;
 
         border: 1px solid $btn-color;
-        border-radius: 5px;
+        @include border-radius;
 
         text-transform: uppercase;
         font-weight: 700;
@@ -56,3 +62,38 @@ body{
         padding: 5px 10px 5px 10px;
     }
 }
+
+// header css part
+
+.header{
+    background-size: cover;
+    background-position: center center;
+
+    color: $txt-color;
+
+    height: 30vh;
+
+    margin: 25px 50px 25px 50px;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    font-weight: 900;
+    letter-spacing: 10px;
+
+    @include border-radius;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .header{
+        margin: 25px 10px 25px 10px;
+    }
+}
+
+
+
