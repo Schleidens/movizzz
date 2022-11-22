@@ -1,0 +1,58 @@
+$bg-color: #1D2D44;
+$txt-color: #F0EBD8;
+$btn-color: #0D1321;
+
+
+
+//reset basic code
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $bg-color;
+    color: $txt-color;
+
+    padding: 5px 50px 5px 50px;
+
+    height: 50px;
+
+    position: sticky;
+    top: 0;
+
+    h1{
+        margin: 0px;
+        line-height: 50px;
+    }
+
+    button{
+        height: auto;
+
+        margin: 5px 0px 5px 0px;
+
+        background-color: $btn-color;
+        color: $txt-color;
+
+        border: 1px solid $btn-color;
+        border-radius: 5px;
+
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        padding: 5px 10px 5px 10px;
+    }
+}
