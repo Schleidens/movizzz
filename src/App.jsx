@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import Moviepage from './components/Moviepage'
 
 function App() {
 
   return (
     <div className="App">
-     yo
+     <Moviepage />
     </div>
   )
 }
