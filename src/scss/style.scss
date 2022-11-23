@@ -164,4 +164,25 @@ body{
     }
 }
 
+@media screen and (max-width: 768px) {
+    .bar{
+        @include responsive-margin;
+    }
+}
+
+
+// main box cs part
+
+.main__box{
+    display: flex;
+}
+
+.movie{
+
+    img{
+        width: 300px;
+        height: auto;
+    }
+}
+
 
