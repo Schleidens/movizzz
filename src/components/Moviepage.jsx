@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
+import Bar from './layout/Bar';
 import Header from './layout/Header';
 
 export default function Moviepage() {
@@ -19,19 +20,30 @@ export default function Moviepage() {
     })
     .catch(error=> console.log(error))
   }
+  
 
   useEffect(()=>{
       getPosts();
   }, [])
+
+  // const randomMovie = movies[Math.floor(Math.random() * movies.length)]
+
+
+
+
   return (
 
     
     <div>
       <Header imgUrl={imgUrl} title={"lorem ipsum"} date={"23, 22, 2022"} actor={"Lorem Ipsum"}/>
 
+     
+      <Bar title={"COMING SOON"}/>
+
       {movies.map((movie)=>(
         <li key={movie.id}>{movie.title}</li>
       ))}
+
 
     </div>
   )
