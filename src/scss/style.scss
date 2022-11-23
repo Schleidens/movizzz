@@ -144,4 +144,24 @@ body{
     }
 }
 
+//bar css part
+
+.bar{
+    @include margin;
+
+    h3{
+        color: $txt-color;
+
+        margin-bottom: 5px;
+    }
+
+    hr{
+        color: $bg-color;
+        
+        border: 2px solid $bg-color;      
+        
+        margin-top: 0;
+    }
+}
+
 
