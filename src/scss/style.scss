@@ -19,6 +19,19 @@ body{
 }
 
 
+@mixin button {
+        margin: 5px 0px 5px 0px;
+
+        background-color: $btn-color;
+        color: $txt-color;
+
+        border: 1px solid $btn-color;
+        @include border-radius;
+
+        text-transform: uppercase;
+        font-weight: 700;
+}
+
 
 
 
@@ -44,16 +57,7 @@ body{
     button{
         height: auto;
 
-        margin: 5px 0px 5px 0px;
-
-        background-color: $btn-color;
-        color: $txt-color;
-
-        border: 1px solid $btn-color;
-        @include border-radius;
-
-        text-transform: uppercase;
-        font-weight: 700;
+        @include button;
     }
 }
 
@@ -74,18 +78,44 @@ body{
     height: 30vh;
 
     margin: 25px 50px 25px 50px;
+    padding-left: 15px;
 
-    text-transform: uppercase;
-    text-align: center;
-
-    font-weight: 900;
-    letter-spacing: 10px;
+    text-align: left;
 
     @include border-radius;
 
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+
+    h2{
+        font-size: 2em;
+        font-weight: 400;
+        margin: 5px 0px 5px 0px;
+        text-transform: uppercase;
+    }
+
+    .header__btn{
+        margin-top: 10px;
+
+        button{
+            @include button;
+            padding: 5px;
+            height: 35px;
+        }
+
+        button:nth-child(1){
+            background-color: $txt-color;
+            color: $btn-color;
+
+            margin-right: 10px;
+
+            width: 95px;
+
+            border: 0px;
+        }
+    }
+    
 }
 
 
