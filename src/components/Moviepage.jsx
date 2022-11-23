@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import Bar from './layout/Bar';
 import Header from './layout/Header';
+import Movie from './layout/Movie';
 
 export default function Moviepage() {
   const [movies, setMovies] = useState([]);
@@ -40,9 +41,11 @@ export default function Moviepage() {
      
       <Bar title={"COMING SOON"}/>
 
+      <div className="main__box">
       {movies.map((movie)=>(
-        <li key={movie.id}>{movie.title}</li>
+        <Movie key={movie.id} img={movie.image} date={movie.releaseState} title={movie.title}/>
       ))}
+      </div>
 
 
     </div>
