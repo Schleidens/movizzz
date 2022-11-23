@@ -1,3 +1,6 @@
+
+//golbal color variables 
+
 $bg-color: #1D2D44;
 $txt-color: #F0EBD8;
 $btn-color: #0D1321;
@@ -13,6 +16,8 @@ body{
     box-sizing: border-box;
     background-color: $body-color;
 }
+
+//mixin part
 
 @mixin border-radius {
     border-radius: 5px;
@@ -32,8 +37,21 @@ body{
         font-weight: 700;
 }
 
+@mixin margin {
+        margin: 25px 50px 25px 50px;
+}
+
+@mixin responsive-margin {
+        margin: 25px 10px 25px 10px;
+}
 
 
+//end mixin
+
+
+
+
+//navbar css code
 
 .navbar{
     display: flex;
@@ -77,7 +95,8 @@ body{
 
     height: 30vh;
 
-    margin: 25px 50px 25px 50px;
+    @include margin;
+
     padding-left: 15px;
 
     text-align: left;
@@ -121,9 +140,8 @@ body{
 
 @media screen and (max-width: 768px) {
     .header{
-        margin: 25px 10px 25px 10px;
+        @include responsive-margin;
     }
 }
-
 
 
