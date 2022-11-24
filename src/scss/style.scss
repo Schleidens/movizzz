@@ -180,9 +180,12 @@ body{
 
 .main__box{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .movie{
+    display: flex;
+    flex-direction: column;
 
     img{
         width: 300px;
