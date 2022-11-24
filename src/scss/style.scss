@@ -229,4 +229,58 @@ body{
     }
 }
 
+//Footer css part
+
+.footer{
+
+    background-color: $bg-color;
+    
+    .footer__box{
+        @include margin;
+
+        margin-bottom: 0px;
+
+        padding: 20px 0px 5px 0px;
+
+        color: $btn-color;
+
+
+        .top{
+            display: flex;
+            justify-content: space-between;
+    
+            h5{
+                margin: 0;
+
+                font-size: 1.5em;
+
+                color: $txt-color;
+            }
+
+            span{
+                margin-right: 5px;
+            }
+        }
+    
+        .copyright{
+            text-align: center;
+    
+            margin-top: 20px;
+
+            a{
+                color: $txt-color;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        .footer__box{
+            @include responsive-margin;
+        }
+    }
+}
+
 
