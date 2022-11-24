@@ -277,8 +277,11 @@ body{
 
 @media screen and (max-width: 768px) {
     .footer{
+
         .footer__box{
             @include responsive-margin;
+
+            margin-bottom: 0px;
         }
     }
 }
