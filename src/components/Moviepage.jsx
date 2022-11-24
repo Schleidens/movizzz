@@ -12,9 +12,9 @@ export default function Moviepage() {
 
 
 
-  const getPosts = () =>{
+  const getPosts = async () =>{
 
-    fetch(url+apikey)
+   await fetch(url+apikey)
     .then(response => response.json())
     .then(json => {
       setMovies(json.items)
@@ -25,7 +25,7 @@ export default function Moviepage() {
 
   useEffect(()=>{
       getPosts();
-  }, [])
+  }, []);
 
   // const randomMovie = movies[Math.floor(Math.random() * movies.length)]
 
