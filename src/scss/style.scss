@@ -284,3 +284,17 @@ body{
 }
 
 
+// loading css part
+
+.loading{
+    @include responsive-margin;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30vh;
+
+    color: $txt-color;
+}
+
