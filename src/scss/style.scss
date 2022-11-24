@@ -181,15 +181,51 @@ body{
 .main__box{
     display: flex;
     flex-wrap: wrap;
+
+    @include margin;
+
+    justify-content: center;
 }
 
 .movie{
     display: flex;
     flex-direction: column;
 
+    color: $txt-color;
+
+    margin: 8px;
+
     img{
-        width: 300px;
+        width: 200px;
         height: auto;
+    }
+
+    span{
+        font-weight: lighter;
+        font-size: .8em;
+
+        margin-top: 5px;
+
+        color: $btn-color;
+    }
+
+    h4{
+        margin: 10px 0px 10px 0px;
+        font-weight: 900;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .main__box{
+        @include responsive-margin;
+    }
+
+    .movie{
+
+        img{
+            width: 350px;
+        }
     }
 }
 
