@@ -16,12 +16,12 @@ export default function Moviepage() {
   const getPosts = async () =>{
     setIsLoading(true);
 
-   await fetch(url+apikey)
-    .then(response => response.json())
-    .then(json => {
-      setMovies(json.items)
-    })
-    .catch(error=> console.log(error))
+      await fetch(url+apikey)
+        .then(response => response.json())
+        .then(json => {
+          setMovies(json.items)
+        })
+        .catch(error=> console.log(error))
 
     setIsLoading(false);
   }
@@ -30,10 +30,6 @@ export default function Moviepage() {
   useEffect(()=>{
       getPosts();
   }, []);
-
-  // const randomMovie = movies[Math.floor(Math.random() * movies.length)]
-
-
 
 
   return (
