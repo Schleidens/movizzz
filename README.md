@@ -1,4 +1,4 @@
-#MoviZZZ | Movie app project
+# MoviZZZ | Movie app project
 
 
 clone the repo using @ssh or HTTPS 
