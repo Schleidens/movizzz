@@ -1,14 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
     <div className='navbar'>
         <h1>
-            MoviZZZ
+           <Link to='/'>
+             MoviZZZ
+           </Link>
         </h1>
 
         <button>
-            Top 250 Movies
+           <Link to='/topmovies'>
+              Top 250 Movies
+           </Link>
         </button>
     </div>
   )
