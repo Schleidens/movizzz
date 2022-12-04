@@ -1,17 +1,21 @@
 import React, { useEffect } from 'react'
+import { useMemo } from 'react';
 import { useState } from 'react';
+import { usePagination } from './hooks/pagination';
 import Bar from './layout/Bar';
 import Header from './layout/Header';
 import Loading from './layout/Loading';
 import Movie from './layout/Movie';
 
+
+const url = "https://imdb-api.com/en/API/ComingSoon/"
+const apikey ="k_p4nwmk5x"
+const imgUrl = "https://cdn.pixabay.com/photo/2019/07/24/18/32/fantasy-4360934_960_720.jpg"
+
 export default function Moviepage() {
   const [movies, setMovies] = useState([]);
-  const url = "https://imdb-api.com/en/API/ComingSoon/"
-  const apikey ="k_p4nwmk5x"
-  const imgUrl = "https://cdn.pixabay.com/photo/2019/07/24/18/32/fantasy-4360934_960_720.jpg"
   const [isLoading, setIsLoading] = useState(false)
-
+  const [pageMovies, paginations] = usePagination(movies);
 
   const getPosts = async () =>{
     setIsLoading(true);
@@ -31,6 +35,7 @@ export default function Moviepage() {
       getPosts();
   }, []);
 
+  
 
   return (
 
@@ -44,11 +49,20 @@ export default function Moviepage() {
       {isLoading ? 
         <Loading />
        : 
+       <div className="movies">
         <div className="main__box">
-        {movies.map((movie)=>(
+        {pageMovies.map((movie)=>(
           <Movie key={movie.id} img={movie.image} date={movie.releaseState} title={movie.title}/>
         ))}
+        
         </div>
+        <nav aria-label="Page navigation example ">
+          <ul className="pagination d-flex justify-content-center">
+            {paginations}
+          </ul>
+        </nav>
+       </div>
+        
       }
 
 
