@@ -19,7 +19,7 @@ export function usePagination(movies) {
         for (let i = min; i < max; i += 1) {
             const className = i === page ? 'page-item active' : 'page-item';
             const index = i;
-            paginationItems.push(<li className={className} onClick={() => setPage(index)}><a className="page-link" href="#">{i + 1}</a></li>)
+            paginationItems.push(<li key={index} className={className} onClick={() => setPage(index)}><a className="page-link" href="#">{i + 1}</a></li>)
         }
 
         return paginationItems;
