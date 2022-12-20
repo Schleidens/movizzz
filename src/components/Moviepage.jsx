@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { useMemo } from 'react';
 import { useState } from 'react';
 import { usePagination } from './hooks/pagination';
 import Bar from './layout/Bar';
