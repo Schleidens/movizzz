@@ -310,3 +310,17 @@ a{
     color: $txt-color;
 }
 
+.page-item{
+
+    a{
+        background-color: $bg-color !important;
+        border: none;
+    }
+}
+
+.active{
+    a{
+        background-color: $btn-color !important;
+        border: none;
+    }
+}
