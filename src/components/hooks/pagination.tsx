@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-const perPage = 18;
+const perPage = 25;
 
 export function usePagination(movies) {
     const [page, setPage] = useState(0);
